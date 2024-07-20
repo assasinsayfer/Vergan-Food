@@ -1,3 +1,122 @@
-h1 {
-    color: red;
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+// Fonts
+@font-face {
+    font-family: 'HanaleiFill-Regular';
+    src: url('../fonts/HanaleiFill-Regular.woff');
+}
+
+@font-face {
+    font-family: 'playfairdisplay-variablefont';
+    src: url('../fonts/playfairdisplay-variablefont_wght-webfont.woff');
+}
+
+@font-face {
+    font-family: 'playfairdisplay-variablefont2';
+    src: url('../fonts/playfairdisplay-variablefont_wght-webfont.woff2');
+}
+
+// Variables
+$font-solo: rgb(105, 112, 105);
+
+// Wrapper
+.wrapper {
+    // width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    // padding: 0 20px;
+}
+
+// Main header
+.main-head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+
+    #logo {
+        img {
+            max-width: 100px;
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-size: 18px;
+                    color: $font-solo;
+                    font-weight: 600;
+                    transition: all 0.5s 0s ease;
+                    font-family: 'playfairdisplay-variablefont', sans-serif;
+
+                    &:hover {
+                        color: #909090;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive styles
+
+@media (min-width: 0) and (max-width: 499px) {
+    .wrapper {
+        width: 100%;
+    }
+    .main-head {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        margin-top: 30px;
+        ul {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+}
+
+// iphat
+
+@media (min-width: 500px) and (max-width: 724px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .main-head {
+        flex-direction: column;
+        text-align: center;
+
+        nav {
+            margin-top: 30px;
+            ul {
+                gap: 30px;
+            }
+        }
+    }
+}
+
+// Macbook
+
+@media (min-width: 725px) and (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+    }
+
+}
+
