@@ -200,6 +200,10 @@ footer {
         gap: 30px; }
 
   main {
+    width: 100%;
+    padding: 0 20px; }
+
+  .hero .linea {
     width: 100%; }
 
   .container-grid {
@@ -216,18 +220,7 @@ footer {
     align-items: center;
     margin: 50px; }
     footer p {
-      color: #807e7e;
-      font-family: 'playfairdisplay-variablefont2', sans-serif;
-      font-weight: 500;
-      font-size: 12px;
-      text-align: center; }
-      footer p a {
-        text-decoration: none;
-        color: #807e7e;
-        transition: all 0.3s 0s ease; }
-        footer p a:hover {
-          color: #000;
-          text-decoration: underline; } }
+      text-align: center; } }
 @media (min-width: 725px) and (max-width: 1024px) {
   .wrapper {
     width: 100%; }
@@ -257,17 +250,6 @@ footer {
     align-items: center;
     margin: 50px; }
     footer p {
-      color: #807e7e;
-      font-family: 'playfairdisplay-variablefont2', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      text-align: center; }
-      footer p a {
-        text-decoration: none;
-        color: #807e7e;
-        transition: all 0.3s 0s ease; }
-        footer p a:hover {
-          color: #000;
-          text-decoration: underline; } }
+      text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */

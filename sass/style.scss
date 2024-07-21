@@ -287,7 +287,15 @@ footer {
     }
     main {
         width: 100%;
+        padding: 0 20px;
     }
+
+    .hero {
+        .linea {
+            width: 100%;
+        }
+    }
+
     .container-grid {
         width: 100%;
         height: auto;
@@ -305,20 +313,7 @@ footer {
         align-items: center;
         margin: 50px;
         p {
-            color: $font-solo;
-            font-family: 'playfairdisplay-variablefont2', sans-serif;
-            font-weight: 500;
-            font-size: 12px;
             text-align: center;
-            a {
-                text-decoration: none;
-                color: $font-solo;
-                transition: all 0.3s 0s ease;
-                &:hover {
-                    color: #000;
-                    text-decoration: underline;
-                }
-            }
         }
     }
 }
@@ -359,20 +354,7 @@ footer {
         align-items: center;
         margin: 50px;
         p {
-            color: $font-solo;
-            font-family: 'playfairdisplay-variablefont2', sans-serif;
-            font-weight: 500;
-            font-size: 14px;
             text-align: center;
-            a {
-                text-decoration: none;
-                color: $font-solo;
-                transition: all 0.3s 0s ease;
-                &:hover {
-                    color: #000;
-                    text-decoration: underline;
-                }
-            }
         }
     }
 }
