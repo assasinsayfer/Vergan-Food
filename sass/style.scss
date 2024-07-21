@@ -22,7 +22,7 @@
 }
 
 // Variables
-$font-solo: rgb(105, 112, 105);
+$font-solo: rgb(128, 126, 126);
 
 // block
 
@@ -30,9 +30,6 @@ $font-solo: rgb(105, 112, 105);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    &:hover {
-        filter: brightness(50%);
-    }
 }
 
 // Wrapper
@@ -65,11 +62,11 @@ $font-solo: rgb(105, 112, 105);
             li {
                 a {
                     text-decoration: none;
-                    color: #666;
+                    color: $font-solo;
                     font-size: 18px;
                     color: $font-solo;
                     font-weight: 600;
-                    transition: all 0.5s 0s ease;
+                    transition: all 0.3s 0s ease;
                     font-family: 'playfairdisplay-variablefont', sans-serif;
 
                     &:hover {
@@ -91,7 +88,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 .hero {
@@ -108,7 +105,7 @@ main {
         margin: 0 0 20px 0;
         color: $font-solo;
         font-size: 18px;
-        font-family: 'playfairdisplay-variablefont';
+        font-family: 'playfairdisplay-variablefont', sans-serif;
         font-weight: 500;
     }
     .linea {
@@ -121,7 +118,7 @@ main {
         font-size: 2rem;
         margin: 0 0 20px 0;
         font-weight: 900;
-        font-family: 'playfairdisplay-variablefont2';
+        font-family: 'playfairdisplay-variablefont2', sans-serif;
     }
 }
 
@@ -144,10 +141,13 @@ main {
             color: #fff;
             text-align: center;
             display: flex;
+            justify-content: center;
             align-items: center;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
             &:hover {
                 opacity: 1;
+                cursor: pointer;
+                background-color: rgba(9, 0, 0, 0.7);
             }
         }
     }
@@ -166,6 +166,30 @@ main {
     .food-4 {
         background-image: url('../images/4.jpg');
         @extend %img-style;
+    }
+}
+
+// footer style
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    p {
+        color: $font-solo;
+        font-family: 'playfairdisplay-variablefont2', sans-serif;
+        font-weight: 500;
+        font-size: 1.2rem;
+        a {
+            text-decoration: none;
+            color: $font-solo;
+            transition: all 0.3s 0s ease;
+            &:hover {
+                color: #000;
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -219,6 +243,28 @@ main {
             }
         }
     }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        p {
+            color: $font-solo;
+            font-family: 'playfairdisplay-variablefont2', sans-serif;
+            font-weight: 500;
+            font-size: 10px;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $font-solo;
+                transition: all 0.3s 0s ease;
+                &:hover {
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 
 // iphat
@@ -253,6 +299,28 @@ main {
             }
         }
     }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        p {
+            color: $font-solo;
+            font-family: 'playfairdisplay-variablefont2', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $font-solo;
+                transition: all 0.3s 0s ease;
+                &:hover {
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
 // Macbook
 @media (min-width: 725px) and (max-width: 1024px) {
@@ -263,6 +331,12 @@ main {
     .main-head {
         flex-direction: column;
         text-align: center;
+        nav {
+            margin-top: 30px;
+            ul {
+                gap: 30px;
+            }
+        }
     }
 
     main {
@@ -276,6 +350,28 @@ main {
             p {
                 text-align: center;
                 padding: 0 20px;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        p {
+            color: $font-solo;
+            font-family: 'playfairdisplay-variablefont2', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $font-solo;
+                transition: all 0.3s 0s ease;
+                &:hover {
+                    color: #000;
+                    text-decoration: underline;
+                }
             }
         }
     }
