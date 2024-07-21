@@ -5,12 +5,6 @@
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 // Fonts
 @font-face {
     font-family: 'HanaleiFill-Regular';
@@ -30,12 +24,22 @@ img {
 // Variables
 $font-solo: rgb(105, 112, 105);
 
+// block
+
+%img-style {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:hover {
+        filter: brightness(50%);
+    }
+}
+
 // Wrapper
 .wrapper {
-    // width: 1200px;
     margin: 0 auto;
     width: 100%;
-    // padding: 0 20px;
+    padding: 0 20px;
 }
 
 // Main header
@@ -61,7 +65,7 @@ $font-solo: rgb(105, 112, 105);
             li {
                 a {
                     text-decoration: none;
-                    color: #333;
+                    color: #666;
                     font-size: 18px;
                     color: $font-solo;
                     font-weight: 600;
@@ -69,7 +73,7 @@ $font-solo: rgb(105, 112, 105);
                     font-family: 'playfairdisplay-variablefont', sans-serif;
 
                     &:hover {
-                        color: #909090;
+                        color: #000;
                     }
                 }
             }
@@ -80,15 +84,17 @@ $font-solo: rgb(105, 112, 105);
 // main (section) style
 
 main {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 20px; 
 }
 
-.vegan-intro {
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,10 +130,11 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    .food {
+    .food-item {
         height: 350px;
         margin: 5px;
         position: relative;
+        transition: filter 0.3s ease;
         p {
             position: absolute;
             z-index: 1;
@@ -139,24 +146,33 @@ main {
             display: flex;
             align-items: center;
             transition: opacity 0.3s ease;
-             &:hover {
+            &:hover {
                 opacity: 1;
-                }
-        }
-        img {
-            transition: filter 0.3s ease;
-        }
-        &:hover {
-            img {
-                filter: brightness(20%);
             }
         }
+    }
+    .food-1 {
+        background-image: url('../images/1.jpg');
+        @extend %img-style;
+    }
+    .food-2 {
+        background-image: url('../images/2.jpg');
+        @extend %img-style;
+    }
+    .food-3 {
+        background-image: url('../images/3.jpg');
+        @extend %img-style;
+    }
+    .food-4 {
+        background-image: url('../images/4.jpg');
+        @extend %img-style;
     }
 }
 
 // Responsive styles
 // Mobile
 @media (min-width: 0) and (max-width: 499px) {
+    // main head
     .wrapper {
         width: 100%;
     }
@@ -169,6 +185,38 @@ main {
         ul {
             flex-direction: column;
             gap: 30px;
+        }
+    }
+    // main style
+    main {
+        width: 100%;
+    }
+
+    .hero {
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+        .linea {
+            width: 100%;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .container-grid {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        .food-item {
+            p {
+                text-align: center;
+            }
         }
     }
 }
@@ -188,6 +236,46 @@ main {
             margin-top: 30px;
             ul {
                 gap: 30px;
+            }
+        }
+    }
+    main {
+        width: 100%;
+    }
+    .container-grid {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        .food-item {
+            p {
+                text-align: center;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+// Macbook
+@media (min-width: 725px) and (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .main-head {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 100%;
+    }
+    .container-grid {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        .food-item {
+            p {
+                text-align: center;
+                padding: 0 20px;
             }
         }
     }
